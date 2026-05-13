@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            /*Colores*/
+            --ColorFondo: #f4f4f4;
+            --ColorTarjeta: #fff;
+
+            --ColorPrincipal: #4caf50;
+            --ColorSecundario: #2196f3;
+
+            --ColorTexto: #333;
+            --Color: #dcdcdc;
+
+            /*Espaciado*/
+            --Padding: 20px;
+            --Radio: 15px;
+
+            /*Sombras*/
+            --Sombras: 0px 4px 10px rgb(0, 0, 0, 0.10);
+
+            /*Fuentes*/
+            --FontSizeTitulo: 34px;
+            --FontSizeSubtitulo: 24px;
+            --FontSizeTexto: 17px;
+            --Font: 'Courier New', Courier, monospace;
+        }
+
+        body{
+            
+            margin: 0;
+            padding: var(--Padding);
+            font-family: var(--Font);
+            background: var(--ColorFondo);
+            color: var(--ColorTexto);
+        }
+
+        h1{
+            text-align: center;
+            font-size: var(--FontSizeTitulo);
+            font-family: var(--Font);
+            color: var(--ColorPrincipal);
+        }
+
+        h2{
+            text-align: left;
+            font-size: var(--FontSizeSubtitulo);
+            font-family: var(--Font);
+            color: var(--ColorSecundario);
+        }
+
+        p{
+            font-size: var(--FontSizeTexto);
+            font-family: var(--Font);
+        }
+
+        .contenedor{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .tarjetas{
+            width: 300px;
+            padding: var(--Padding);
+            background: var(--ColorTarjeta);
+            margin: 20px;
+            box-shadow: var(--Sombras);
+            border: 1px;
+            border-radius: var(--Radio);
+        }
+
+        .tarjetas:hover{
+            transform: translateY(-2px);
+        }
+
+        .tarjetas h2{
+            color: var(--ColorSecundario);
+            font-family: var(--Font);
+            
+        }
+
+        .btn{
+            border: none;
+            padding: var(--Padding);
+            border-radius: var(--Radio);
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-primary{
+            background: var(--ColorPrincipal);
+        }
+
+        .btn-secundary{
+            background: var(--ColorSecundario);
+        }
+
+        .btn:hover{
+            opacity: 0.85;
+        }
+
+        .alert{
+            --ColorAlerta: #ff5252;
+            margin-top: 40px;
+            background: var(--ColorAlerta);
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: var(--Radio);
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Variables en CSS</h1>
+
+    <p>
+        este ejemplo utiliza variables CSS para controlar
+        colores, tamaños, bordes, sombras y espacios.
+    </p>
+
+    <div class="contenedor">
+        <div class="tarjetas">
+            <h2>Tarjeta 1</h2>
+            <p>
+                Esta tarjeta utiliza variables globales
+                para mantener un mismo diseño.
+            </p>
+            <button class="btn btn-primary">
+                Aceptar
+            </button>
+        </div>
+
+        <div class="tarjetas">
+            <h2>Tarjeta 2</h2>
+            <p>
+                cambiando una variable podemos alterar
+                el diseño de varios elementos.
+            </p>
+            <button class="btn btn-secundary">
+                Ver mas
+            </button>
+        </div>
+    </div>
+
+    <div class="alert">
+            Esta seccion ocupa una variable local
+    </div>
+</body>
+</html>
