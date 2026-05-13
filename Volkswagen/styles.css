@@ -193,12 +193,12 @@
         }
 
         footer a {
-            color: var(--ColorSecundario);
+            color: var(--ColorFondo);
             text-decoration: none;
             font-weight: bold;
         }
 
         footer a:hover {
-            color: #fff;
+            color: var(--ColorSecundario);
             text-decoration: underline;
         }
